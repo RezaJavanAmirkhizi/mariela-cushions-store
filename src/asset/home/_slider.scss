@@ -1,0 +1,88 @@
+.bg {
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	.top-bg {
+		width: 100%;
+		min-height: 450px;
+		background-color: #c9adc6;
+	}
+	.bottom-bg {
+		width: 100%;
+		min-height: 350px;
+		background-color: $main-box-background-color;
+		position: relative;
+	}
+}
+
+.slider-con {
+	margin-top: -750px;
+
+	.swiper {
+		width: 80%;
+		height: 750px;
+	}
+
+	.swiper-slide {
+		text-align: center;
+		font-size: 18px;
+
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: flex-start;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+
+		.pic {
+			width: 70%;
+			min-height: 675px;
+			position: relative;
+			background-image: url("https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff54fc5009cbe7_2.png");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center center;
+			margin: 0 0 0 6%;
+		}
+		
+		.des {
+			width: 35%;
+			min-height: 450px;
+			background-color: $secondary-box-background-color;
+			color: $main-text-color;
+			z-index: 2;
+			position: absolute;
+			right: 0.5%;
+			@include c-flex;
+
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+			p,
+			h1,
+			a {
+				width: 70%;
+				text-align: left;
+			}
+
+			a, p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 13.5px;
+				color: $main-text-color;
+			}
+		}
+	}
+
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
