@@ -1,0 +1,34 @@
+//default font
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+*{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+//defaults color
+$main-box-background-color: #ceb3cb;
+$secondary-box-background-color: #b08ead;
+$main-text-color: #fff;
+
+//defaults layout
+@mixin r-flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin c-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+//styles
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+@import "./navBar/navBar";
+@import "./home/slider";
