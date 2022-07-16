@@ -1,0 +1,48 @@
+.products {
+	display: grid;
+	width: 100%;
+	padding: 75px 0;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	row-gap: 30px;
+}
+
+.product {
+	@include c-flex;
+	align-items: flex-start;
+	width: 25%;
+	min-width: 340px;
+
+	.pic {
+		width: 100%;
+		height: 360px;
+        overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			transition: 0.5s all ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	h3,
+	p {
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding-top: 10px;
+	}
+
+    h3{
+        color: black;
+    }
+
+	p {
+		color: #b0b0b0;
+	}
+}
