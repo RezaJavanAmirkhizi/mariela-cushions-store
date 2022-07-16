@@ -1,8 +1,9 @@
 //default font
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-*{
-    font-family: 'Cormorant Garamond', serif;
+* {
+	font-family: "Cormorant Garamond", serif;
 }
 
 //defaults color
@@ -12,23 +13,55 @@ $main-text-color: #fff;
 
 //defaults layout
 @mixin r-flex {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 @mixin c-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin mini-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: $main-text-color;
+}
+
+p,
+a {
+	@include mini-title;
+}
+
+.button {
+	@include mini-title;
+	color: #b99bb6;
+	padding: 15px 28px;
+	border: 1px solid #b99bb6;
+	text-decoration: none;
+	border-radius: 25px;
+	font-size: 13.5px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: $main-text-color;
+		background-color: #b99bb6;
+	}
 }
 
 //styles
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
+	margin: 0;
+	padding: 0;
 }
 
 @import "./navBar/navBar";
 @import "./home/slider";
+@import "./home/description";
+@import "./home/aboutMe";
+@import "./home/details";
+@import "./home/newestCollection";
+@import "./products//product"
