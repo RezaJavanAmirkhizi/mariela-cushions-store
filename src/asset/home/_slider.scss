@@ -63,18 +63,11 @@
 			right: 0.5%;
 			@include c-flex;
 
-            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 			p,
 			h1,
 			a {
 				width: 70%;
 				text-align: left;
-			}
-
-			a, p {
-                font-family: 'Roboto', sans-serif;
-                font-size: 13.5px;
-				color: $main-text-color;
 			}
 		}
 	}
