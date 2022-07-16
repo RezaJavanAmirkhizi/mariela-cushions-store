@@ -1,0 +1,46 @@
+.new-collection-con {
+	@include c-flex;
+	background-color: $main-box-background-color;
+	padding: 75px 25px;
+
+	.new-collection {
+		@include r-flex;
+        justify-content: flex-start;
+		width: 80%;
+
+		.pic {
+			width: 44%;
+            min-width: 540px;
+			min-height: 675px;
+			position: relative;
+			background-image: url("https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff5484b309cbf1_7-p-130x130q80.jpeg");
+			background-repeat: no-repeat;
+			background-attachment: unset;
+			background-size: contain;
+			background-position: center center;
+			margin: 0 0 0 12%;
+            
+			
+		}
+
+		.des {
+            @include c-flex;
+			width: 35%;
+            max-width: 440px;
+			min-height: 450px;
+			background-color: $secondary-box-background-color;
+			color: $main-text-color;
+			z-index: 2;
+			position: absolute;
+            left: 55%;
+			
+
+			p,
+			h1,
+			a {
+				width: 70%;
+				text-align: left;
+			}
+		}
+	}
+}
