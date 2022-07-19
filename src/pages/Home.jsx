@@ -4,6 +4,8 @@ import AboutMe from "../components/home/AboutMe";
 import Details from "../components/home/Details";
 import NewestCollection from "../components/home/NewestCollection";
 import NewestCollectionProducts from "../components/home/NewestCollectionProducts";
+import ContactMe from "../components/home/ContactMe";
+import Newsletter from "../components/home/Newsletter";
 
 function Home() {
 	return (
@@ -14,6 +16,8 @@ function Home() {
 			<Details />
 			<NewestCollection />
 			<NewestCollectionProducts />
+			<ContactMe />
+			<Newsletter />
 		</>
 	);
 }

@@ -1,6 +1,5 @@
 //default font
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Roboto:wght@400;700&display=swap');
 
 * {
 	font-family: "Cormorant Garamond", serif;
@@ -64,4 +63,7 @@ body {
 @import "./home/aboutMe";
 @import "./home/details";
 @import "./home/newestCollection";
-@import "./products//product"
+@import "./products//product";
+@import "./home/contactMe";
+@import "./home/newletter";
+@import "./footer/footer"
