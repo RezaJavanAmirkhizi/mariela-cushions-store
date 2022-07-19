@@ -2,17 +2,18 @@
 	display: grid;
 	width: 100%;
 	padding: 75px 0;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fill, 360px);
 	align-items: center;
-	justify-items: center;
-	row-gap: 30px;
+	justify-content: center;
+	gap: 40px;
+	grid-auto-flow: auto;
 }
 
 .product {
 	@include c-flex;
 	align-items: flex-start;
 	width: 25%;
-	min-width: 340px;
+	min-width: 360px;
 
 	.pic {
 		width: 100%;
