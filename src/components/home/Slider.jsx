@@ -13,7 +13,6 @@ function Slider() {
 		<>
 			<div className="bg">
 				<div className="top-bg"></div>
-				<div className="bottom-bg"></div>
 				<div className="slider-con">
 					<Swiper
 						spaceBetween={30}
@@ -33,8 +32,8 @@ function Slider() {
 							<div className="pic"></div>
 							<div className="des">
 								<p>NEW</p>
-								<h1>Spring CushionCollection 2019</h1>
-                                <a href="">BUY NOW</a>
+								<h1>Spring Cushion Collection 2019</h1>
+                                <a href="/">BUY NOW</a>
 							</div>
 						</SwiperSlide>
 					</Swiper>
