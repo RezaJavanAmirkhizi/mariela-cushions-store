@@ -2,11 +2,11 @@
 	@include r-flex;
 	background-color: $main-text-color;
 	justify-content: space-between;
-    width: 100%;
+	width: 100%;
 	height: 120px;
 
 	.logo {
-        padding: 0 25px;
+		padding: 0 25px;
 		height: 100%;
 		@include c-flex;
 
@@ -15,57 +15,98 @@
 		}
 	}
 
+	.menu-item {
+		width: 80%;
+		height: 100%;
+		@include r-flex;
+		justify-content: flex-end;
+		li {
+			@include c-flex;
+			list-style: none;
+			padding: 0 20px;
+			height: 100%;
+			font-size: 24px;
+			line-height: 30px;
+			color: $secondary-box-background-color;
+			cursor: pointer;
+			position: relative;
+
+			&:first-child::after {
+				content: "";
+				width: 100%;
+				height: 5px;
+				background-color: $main-box-background-color;
+				position: absolute;
+				bottom: 0;
+			}
+
+			&:hover::after {
+				content: "";
+				width: 100%;
+				height: 5px;
+				background-color: $main-box-background-color;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
 	.nav-right {
 		@include r-flex;
 		height: 100%;
-        justify-content: center;
-        padding: 0 25px;
-
-		nav {
-            width: auto !important;
+		justify-content: center;
+		padding: 0 25px;
+		.nav-item {
+			padding: 0 15px;
 			height: 100%;
-			@include r-flex;
-			li {
-                @include c-flex;
-				list-style: none;
-				padding: 0 20px;
-				height: 100%;
-				font-size: 24px;
-				line-height: 30px;
-				color: $secondary-box-background-color;
-                cursor: pointer;
-                position: relative;
+			@include c-flex;
+			font-size: 20px;
+			color: $secondary-box-background-color;
+			cursor: pointer;
 
-                &:first-child::after {
-                    content: "";
-                    width: 100%;
-                    height: 5px;
-                    background-color: $main-box-background-color;
-                    position: absolute;
-                    bottom: 0;
-                }
+			&:hover {
+				color: $main-box-background-color;
+			}
 
-                &:hover::after{
-                    content: "";
-                    width: 100%;
-                    height: 5px;
-                    background-color: $main-box-background-color;
-                    position: absolute;
-                    bottom: 0;
-                }
+			.menu-icon {
+				display: none;
 			}
 		}
-        .user-item{
-            padding: 0 15px;
-            height: 100%;
-            @include c-flex;
-            font-size: 20px;
-            color: $secondary-box-background-color;
-            cursor: pointer;
+	}
+}
 
-            &:hover{
-                color: $main-box-background-color;
-            }
-        }
+@media only screen and (max-width: 991px) {
+	.nav-bar {
+		position: relative;
+
+		.menu-item {
+			@include c-flex;
+			display: none;
+			background-color: $main-text-color;
+			width: 100%;
+			height: calc(100vh - 120px);
+			position: absolute;
+			top: 120px;
+			gap: 10px;
+			z-index: 2;
+			border-top: 3px solid $main-box-background-color;
+
+			li {
+				width: 150px;
+				height: 70px;
+			}
+		}
+
+		.menu-item.open {
+			display: flex;
+		}
+
+		.nav-right {
+			.nav-item {
+				.menu-icon {
+					display: block;
+				}
+			}
+		}
 	}
 }
