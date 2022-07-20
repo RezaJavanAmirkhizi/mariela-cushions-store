@@ -52,3 +52,20 @@
         border-bottom: none;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .details{
+        .detail{
+            @include c-flex;
+            gap: 10px;
+
+            .context, .pic{
+                width: 95%;
+            }
+        }
+
+        .detail:nth-child(2){
+            flex-direction: column-reverse;
+        }
+    }
+}
