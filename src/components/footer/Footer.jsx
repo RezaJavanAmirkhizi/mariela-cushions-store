@@ -35,13 +35,13 @@ function Footer() {
 				</div>
 			</div>
 			<div className="bottom">
+				<a href="/" className="logo">
+					<img
+						alt="logo"
+						src="https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff54041509cbe6_Logo-w-p-130x130q80.png"
+					/>
+				</a>
 				<div className="menu">
-					<a href="/" className="logo">
-						<img
-							alt="logo"
-							src="https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff54041509cbe6_Logo-w-p-130x130q80.png"
-						/>
-					</a>
 					<nav>
 						<li>Home</li>
 						<li>About me</li>
