@@ -6,10 +6,11 @@ import NewestCollection from "../components/home/NewestCollection";
 import NewestCollectionProducts from "../components/home/NewestCollectionProducts";
 import ContactMe from "../components/home/ContactMe";
 import Newsletter from "../components/home/Newsletter";
+import FadeIn from "react-fade-in";
 
 function Home() {
 	return (
-		<>
+		<FadeIn>
 			<Slider />
 			<Description />
 			<AboutMe />
@@ -18,7 +19,7 @@ function Home() {
 			<NewestCollectionProducts />
 			<ContactMe />
 			<Newsletter />
-		</>
+		</FadeIn>
 	);
 }
 
