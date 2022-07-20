@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
 
@@ -23,15 +24,35 @@ function NavBar() {
 					src="https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff54649009cbdd_Logo-p-130x130q80.png"
 				/>
 			</a>
-			<nav className={`menu-item ${isOpen ? 'open' : 'closed'}`}>
-				<li>Home</li>
-				<li>About me</li>
-				<li>Products</li>
-				<li>Contact me</li>
+			<nav className={`menu-item ${isOpen ? "open" : "closed"}`}>
+				<li>
+					<Link className="link" to="/">
+						Home
+					</Link>
+				</li>
+				<li>
+					<Link className="link" to="/#about_me">
+						About me
+					</Link>
+				</li>
+				<li>
+					<Link className="link" to="/products">
+						Products
+					</Link>
+				</li>
+				<li>
+					<Link className="link" to="/#contact_me">
+						Contact me
+					</Link>
+				</li>
 			</nav>
 			<div className="nav-right">
 				<div className="nav-item">
-					<FontAwesomeIcon onClick={() => menuHandler()} className="menu-icon" icon={faBars} />
+					<FontAwesomeIcon
+						onClick={() => menuHandler()}
+						className="menu-icon"
+						icon={faBars}
+					/>
 				</div>
 				<div className="nav-item">
 					<FontAwesomeIcon icon={faCartShopping} />
