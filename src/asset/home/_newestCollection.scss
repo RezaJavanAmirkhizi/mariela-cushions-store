@@ -12,7 +12,7 @@
 			width: 44%;
 			min-width: 540px;
 			position: relative;
-			
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -74,10 +74,12 @@
 
 @media only screen and (max-width: 568px) {
 	.new-collection-con {
+		padding: 75px 10px;
+
 		.new-collection {
 			@include c-flex;
 
-			.pic {
+			.pic, .des {
 				min-width: 300px;
 				max-width: 568px;
 				background-color: $secondary-box-background-color;
@@ -88,8 +90,8 @@
 				position: static;
 				width: 100%;
 			}
+
 			.des {
-				position: static;
 				margin: 0;
 				padding: 0;
 				max-width: 100%;
