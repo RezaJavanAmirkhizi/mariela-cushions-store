@@ -51,6 +51,23 @@ a {
 	}
 }
 
+.page-title {
+	padding: 75px 0;
+	width: 100%;
+	background-color: #d6bbd3;
+	@include c-flex;
+
+	h1{
+		width: 90%;
+		font-size: 45px;
+		color: $main-text-color;
+	}
+}
+
+.check-box{
+	@include r-flex;
+}
+
 //styles
 body {
 	margin: 0;
@@ -66,4 +83,6 @@ body {
 @import "./products//product";
 @import "./home/contactMe";
 @import "./home/newletter";
-@import "./footer/footer"
+@import "./footer/footer";
+@import "./products/productDetails";
+@import "./cart/checkOut";
