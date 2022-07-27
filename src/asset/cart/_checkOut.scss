@@ -1,0 +1,231 @@
+.cart-info {
+	padding: 75px 0;
+	width: 100%;
+	@include r-flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	background-color: #f3f3f3;
+
+	.contact-info {
+		padding: 25px 0 15px 0;
+		width: 60%;
+		background-color: $main-text-color;
+
+		.billing-address.disabled {
+			pointer-events: none;
+			opacity: 0.2;
+		}
+
+		.customer,
+		.address,
+		.method,
+		.payment,
+		.billing-address {
+			@include c-flex;
+			padding: 0 5% 4% 5%;
+			border-bottom: 1px solid #ddd;
+
+			.title {
+				@include r-flex;
+				padding: 4px 20px;
+				width: 100%;
+				justify-content: space-between;
+
+				h4 {
+					font-size: 22px;
+				}
+			}
+
+			.forms {
+				@include c-flex;
+				padding: 20px;
+				width: 100%;
+				gap: 8px;
+				align-items: flex-start;
+
+				span {
+					font-size: 18px;
+					font-weight: 400;
+				}
+
+				input {
+					padding: 8px 12px;
+					width: calc(100% - 24px);
+					height: 30px;
+					background-color: #fafafa;
+					font-size: 24px;
+					outline: none;
+					border: 1px solid #ddd;
+				}
+			}
+
+			.row-forms {
+				@include r-flex;
+				width: 100%;
+				padding: 20px;
+				justify-content: flex-start;
+				gap: 8px;
+
+				.forms {
+					padding: 0;
+				}
+			}
+		}
+
+		.palce-order {
+			@include c-flex;
+			width: 100%;
+			padding: 23px 0;
+
+			a {
+				@include c-flex;
+				text-transform: uppercase;
+				text-decoration: none;
+				width: 85%;
+				height: 60px;
+				background-color: $main-box-background-color;
+				font-size: 11px;
+
+				&:hover {
+					background-color: #d6bbd3;
+				}
+			}
+		}
+
+		.method {
+			.method-forms {
+				@include c-flex;
+				width: 100%;
+
+				.method-form {
+					width: calc(100% - 32px);
+					padding: 16px;
+					border: 1px solid #ddd;
+					@include r-flex;
+					align-items: flex-start;
+					justify-content: space-between;
+
+					&:nth-child(2) {
+						border-top: none;
+						border-bottom: none;
+					}
+
+					p {
+						color: #b0b0b0;
+						font-weight: 400;
+						font-size: 16px;
+						margin: 0;
+					}
+
+					input[type="radio"] {
+						align-self: flex-start;
+						font-size: 24px;
+					}
+
+					label {
+						@include c-flex;
+						align-items: flex-start;
+						font-size: 22px;
+						height: 34px;
+
+						span {
+							font-size: 15px;
+							color: #b0b0b0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.order-info {
+		@include c-flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 20px;
+		width: 35%;
+		height: 600px;
+		max-height: 750px;
+
+		.items {
+			@include c-flex;
+			align-items: flex-start;
+			width: 100%;
+			background-color: $main-text-color;
+
+			.title {
+				padding: 4px 20px;
+				width: calc(100% - 40px);
+				border-bottom: 1px solid #ddd;
+
+				h4 {
+					font-size: 22px;
+				}
+			}
+
+			.orders {
+				@include c-flex;
+				padding: 20px;
+				width: calc(100% - 40px);
+				gap: 20px;
+
+				.item {
+					@include r-flex;
+					width: 100%;
+					align-items: flex-start;
+					justify-content: space-between;
+
+					div {
+						@include c-flex;
+						align-items: flex-start;
+						justify-content: flex-start;
+					}
+
+					img {
+						width: 60px;
+					}
+
+					h4 {
+						margin: 0;
+						font-size: 20px;
+						height: 30px;
+					}
+
+					p {
+						color: #b0b0b0;
+						font-weight: 400;
+						font-size: 16px;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.cart-info {
+		@include c-flex;
+		gap: 40px;
+		.contact-info,
+		.order-info {
+			width: 90%;
+		}
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	.cart-info {
+		.contact-info {
+			.customer,
+			.address,
+			.method,
+			.payment,
+			.billing-address {
+				.row-forms {
+					@include c-flex;
+				}
+			}
+		}
+	}
+}
