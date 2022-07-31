@@ -1,7 +1,7 @@
-import Product from "../components/Product";
 import { connect } from "react-redux";
-import getAllProducts from "../data/action/getAllProducts";
+import getAllProducts from "../data/actions/getAllProducts";
 import { useState, useEffect } from "react";
+import ProductPageHandler from "./ProductPageHandler";
 
 function Products(props) {
 	//Create this state to set products from api
@@ -16,28 +16,7 @@ function Products(props) {
 		setProducts(props.products);
 	}, [props.products]);
 
-	return (
-		<>
-			<div className="page-title">
-				<h1>Products</h1>
-			</div>
-			<div className="products">
-				{products.length !== 0
-					? products.map((item) => {
-							return (
-								<Product
-									key={item.id}
-									id={item.id}
-									image={item.image}
-									name={item.name}
-									price={item.price}
-								/>
-							);
-					  })
-					: ""}
-			</div>
-		</>
-	);
+	return <ProductPageHandler pageTitle="Products" products={products} />;
 }
 
 const mapStateToProps = (state) => {
