@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function NewestCollection() {
 	return (
 		<div className="new-collection-con">
@@ -7,8 +9,8 @@ function NewestCollection() {
 				</div>
 				<div className="des">
 					<p>NEW</p>
-					<h1>Spring CushionCollection 2019</h1>
-					<a href="/">BUY NOW</a>
+					<h1>Newest Cushion Collection 2022</h1>
+					<Link to={`/collections/Patterned`}>BUY NOW</Link>
 				</div>
 			</div>
 		</div>
