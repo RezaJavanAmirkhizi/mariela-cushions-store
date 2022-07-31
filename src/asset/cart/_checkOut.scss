@@ -8,7 +8,7 @@
 
 	.contact-info {
 		padding: 25px 0 15px 0;
-		width: 60%;
+		width: 55%;
 		background-color: $main-text-color;
 
 		.billing-address.disabled {
@@ -143,7 +143,7 @@
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 20px;
-		width: 35%;
+		width: 40%;
 		height: 600px;
 		max-height: 750px;
 
@@ -181,14 +181,27 @@
 						justify-content: flex-start;
 					}
 
-					img {
-						width: 60px;
+					.name {
+						width: 50%;
 					}
 
-					h4 {
+					.delete-item {
+						align-self: center;
+					}
+
+					img {
+						width: 60px;
+						height: 60px;
+					}
+
+					.product-link {
 						margin: 0;
 						font-size: 20px;
 						height: 30px;
+						color: black;
+						font-family: "Cormorant Garamond", serif;
+						font-weight: 700;
+						text-decoration: none;
 					}
 
 					p {
