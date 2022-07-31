@@ -1,6 +1,6 @@
 import Product from "../Product";
 import { connect } from "react-redux";
-import getProductsByFilter from "../../data/action/getProductsByFilter";
+import getProductsByFilter from "../../data/actions/getProductsByFilter";
 import { useState, useEffect } from "react";
 
 function NewestCollectionProducts(props) {
@@ -8,7 +8,7 @@ function NewestCollectionProducts(props) {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		props.getProductsByFilter("collection", "simple");
+		props.getProductsByFilter("collection", "Patterned");
 		setProducts(props.products);
 	}, []);
 
@@ -19,7 +19,7 @@ function NewestCollectionProducts(props) {
 	return (
 		<div className="products">
 			{products.lengh !== 0
-				? products.map((item) => {
+				? products.slice(0, 6).map((item) => {
 						return (
 							<Product
 								key={item.id}
