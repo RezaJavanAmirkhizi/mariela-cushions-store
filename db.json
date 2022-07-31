@@ -5,56 +5,56 @@
 			"name": "Yellow Cushion",
 			"price": 19.99,
 			"image": "https://th.bing.com/th/id/OIP.wz3YBB1Ntvltpn45vPtrFgHaHb?pid=ImgDet&rs=1",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 2,
 			"name": "Silver Cushion",
 			"price": 19.99,
 			"image": "https://th.bing.com/th/id/OIP.Xp3zWW8FXmGgin-7hoIQcwHaHa?pid=ImgDet&rs=1",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 3,
 			"name": "Deep Blue Cushion",
 			"price": 19.99,
 			"image": "https://th.bing.com/th/id/OIP.6m5kTr77ai4kJYz4M7rGgQHaHa?pid=ImgDet&w=600&h=600&rs=1",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 4,
 			"name": "Pink Cushion",
 			"price": 19.99,
 			"image": "https://th.bing.com/th/id/OIP._iaXZW-LAyVutANWxtZzowHaHa?pid=ImgDet&w=1000&h=1000&rs=1",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 5,
 			"name": "Black Cushion",
 			"price": 19.99,
 			"image": "https://images-na.ssl-images-amazon.com/images/I/51fJqVavmIL._AC_SX679_.jpg",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 6,
 			"name": "Green Cushion",
 			"price": 19.99,
 			"image": "https://th.bing.com/th/id/OIP.rh7gnPPn9weu7YKyVvvu6wHaHa?pid=ImgDet&rs=1",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 7,
 			"name": "White Cushion",
 			"price": 19.99,
 			"image": "https://images.unsplash.com/photo-1629949009765-40fc74c9ec21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 8,
 			"name": "Sky Blue Cushion",
 			"price": 19.99,
 			"image": "https://images.unsplash.com/photo-1570786240066-c0d753711cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=581&q=80",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 9,
@@ -82,7 +82,7 @@
 			"name": "Oil Blue Cushion",
 			"price": 19.99,
 			"image": "https://images.unsplash.com/photo-1611967164521-abae8fba4668?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 13,
@@ -187,7 +187,7 @@
 			"name": "Orange Cushion",
 			"price": 19.99,
 			"image": "https://images.unsplash.com/photo-1567113463686-c2253e8210db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-			"collection": "simple"
+			"collection": "Simple"
 		},
 		{
 			"id": 28,
