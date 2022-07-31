@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import getProductsByFilter from "../data/action/getProductsByFilter";
+import getProductsByFilter from "../data/actions/getProductsByFilter";
 
 function Product(props) {
 	return (
 		<Link
-			onClick={() => props.getProductsByFilter("id", props.id)}
+			onClick={() => {props.getProductsByFilter("id", props.id)}}
 			className="product"
 			to={`/product_detail/${props.id}`}
 		>
