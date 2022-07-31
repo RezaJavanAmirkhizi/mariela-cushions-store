@@ -1,8 +1,8 @@
-import axios from "../../api/axios";
+import instance from "../../api/axios";
 
-const getAllProducts = () => (dispatch) => {
-	axios
-		.get("http://localhost:3500/products")
+const getAllProducts = () => async (dispatch) => {
+	await instance
+		.get("/products")
 		.then((response) => {
 			dispatch({
 				type: "GET_ALL_PRODUCTS",

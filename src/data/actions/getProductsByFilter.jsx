@@ -1,8 +1,8 @@
-import axios from "../../api/axios";
+import instance from '../../api/axios';
 
-const getProductsByFilter = (key, value) => (dispatch) => {
-	axios
-		.get(`http://localhost:3500/products?${key}=${value}`)
+const getProductsByFilter = (key, value) => async (dispatch) => {
+	await instance
+		.get(`/products?${key}=${value}`)
 		.then((response) => {
 			dispatch({
 				type: "GET_PRODUCTS_BY_FILTER",
