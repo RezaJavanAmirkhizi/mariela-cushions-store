@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
-import getProductsByFilter from "../data/action/getProductsByFilter";
+import getProductsByFilter from "../data/actions/getProductsByFilter";
 
 function ProductDetail(props) {
 	//Create this state to control number of products
@@ -10,7 +10,10 @@ function ProductDetail(props) {
 	//Create this state to set products from api
 	const [products, setProducts] = useState([]);
 
-	//Get if from query string
+	//Create this state to message users
+	const [added, setAdded] = useState(false);
+
+	//Get id from query string
 	const { id } = useParams();
 
 	useEffect(() => {
@@ -21,6 +24,38 @@ function ProductDetail(props) {
 	useEffect(() => {
 		setProducts(props.products);
 	}, [props.products]);
+
+	//Create this function for add product to card and localstorage
+	const addToCart = (e) => {
+		e.preventDefault();
+		let cartItems = localStorage.getItem("cart")
+			? JSON.parse(localStorage.getItem("cart"))
+			: [];
+
+		let check = -1;
+
+		for (let i = 0; i < cartItems.length; i++) {
+			if (cartItems[i].id === props.products[0].id) {
+				check = i;
+				break;
+			}
+		}
+		console.log(check);
+
+		if (check !== -1) {
+			cartItems[check].count =
+				Number(cartItems[check].count) + numOfProducts;
+			localStorage.setItem("cart", JSON.stringify(cartItems));
+		} else {
+			cartItems.push({ ...props.products[0], count: numOfProducts });
+			localStorage.setItem("cart", JSON.stringify(cartItems));
+		}
+
+		setAdded(true);
+		setTimeout(() => {
+			setAdded(false);
+		}, 2000);
+	};
 
 	return (
 		<>
@@ -36,18 +71,24 @@ function ProductDetail(props) {
 								/>
 							</div>
 							<div className="des">
-								<h1>Pink Cushion</h1>
-								<p>$19.99 USD</p>
+								<h1>{props.products[0].name}</h1>
+								<p>{`$ ${props.products[0].price} USD`}</p>
 								<span>Quantity</span>
 								<input
 									type="number"
 									value={numOfProducts}
 									onChange={(e) =>
-										setNumOfProducts(e.target.value)
+										setNumOfProducts(Number(e.target.value))
 									}
 								/>
-								<a href="/">Add to cart</a>
-								<a href="/">Buy Now</a>
+								<h5 className={added ? "added" : ""}>
+									The item has been successfully added to the
+									shopping cart
+								</h5>
+								<button onClick={(e) => addToCart(e)}>
+									Add to cart
+								</button>
+								<button>Buy Now</button>
 							</div>
 						</div>
 					</div>
@@ -75,12 +116,12 @@ function ProductDetail(props) {
 						<div className="details-item">
 							<h1>images</h1>
 							<img
-								alt=""
-								src="https://indiacircus.com/pub/media/catalog/product/i/n/india-circus-the-mughal-rickshaw-cushion-cover-set-of-5-52121512sd01581-1.jpg"
+								alt={props.products[0].name}
+								src={props.products[0].image}
 							/>
 							<img
-								alt=""
-								src="https://indiacircus.com/pub/media/catalog/product/cache/1/image/e9c3970ab036de70892d86c6d221abfe/i/n/india-circus-poppy-window-cushion-cover-set-of-5-52121512sd01574-1.jpg"
+								alt={props.products[0].name}
+								src={props.products[0].image}
 							/>
 						</div>
 					</div>
