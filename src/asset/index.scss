@@ -1,5 +1,5 @@
 //default font
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Roboto:wght@400;700&display=swap");
 
 * {
 	font-family: "Cormorant Garamond", serif;
@@ -30,8 +30,16 @@ $main-text-color: #fff;
 	color: $main-text-color;
 }
 
+.container {
+	@include c-flex;
+	width: 100%;
+	height: 100vh;
+	color: $secondary-box-background-color;
+}
+
 p,
-a {
+a,
+button {
 	@include mini-title;
 }
 
@@ -51,20 +59,33 @@ a {
 	}
 }
 
+.icon-link {
+	@include c-flex;
+	font-size: 20px;
+	color: $secondary-box-background-color;
+	cursor: pointer;
+}
+
 .page-title {
 	padding: 75px 0;
 	width: 100%;
 	background-color: #d6bbd3;
 	@include c-flex;
 
-	h1{
+	h1 {
 		width: 90%;
 		font-size: 45px;
 		color: $main-text-color;
 	}
 }
 
-.check-box{
+.err-message {
+	font-size: 25px;
+	color: red;
+	padding: 0 75px;
+}
+
+.check-box {
 	@include r-flex;
 }
 
