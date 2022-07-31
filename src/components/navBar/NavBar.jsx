@@ -55,7 +55,9 @@ function NavBar() {
 					/>
 				</div>
 				<div className="nav-item">
-					<FontAwesomeIcon icon={faCartShopping} />
+					<Link className="icon-link" to="/checkout">
+						<FontAwesomeIcon icon={faCartShopping} />
+					</Link>
 				</div>
 			</div>
 		</div>
