@@ -6,6 +6,8 @@ import Footer from "./footer/Footer";
 import Products from "../pages/Products";
 import ProductDetail from "../pages/ProductDetail";
 import CheckOut from "../pages/CheckOut";
+import Collections from "../pages/Collections";
+import OrderResult from "../pages/OrderResult";
 
 function App() {
 	return (
@@ -16,6 +18,11 @@ function App() {
 				<Route exact path="/products" element={<Products />} />
 				<Route path="/product_detail/:id" element={<ProductDetail />} />
 				<Route path="/checkout" element={<CheckOut />} />
+				<Route
+					path="/collections/:collection_name"
+					element={<Collections />}
+				/>
+				<Route path="/order_result" element={<OrderResult />} />
 			</Routes>
 			<Footer />
 		</div>
