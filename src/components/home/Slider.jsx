@@ -54,11 +54,20 @@ function Slider() {
 							? collections.map((collection) => {
 									return (
 										<SwiperSlide key={collection.id}>
-											<div className="pic"></div>
+											<div className="pic">
+												<img
+													alt={collection.name}
+													src={collection.image}
+												/>
+											</div>
 											<div className="des">
 												<p>NEW</p>
 												<h1>{collection.name}</h1>
-												<Link to={`/collections/${collection.name}`}>BUY NOW</Link>
+												<Link
+													to={`/collections/${collection.name}`}
+												>
+													BUY NOW
+												</Link>
 											</div>
 										</SwiperSlide>
 									);

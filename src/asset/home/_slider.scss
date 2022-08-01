@@ -45,11 +45,15 @@
 			width: 70%;
 			height: 675px;
 			position: relative;
-			background-image: url("https://uploads-ssl.webflow.com/62be0f5753ff54221209cbb4/62be0f5853ff54fc5009cbe7_2.png");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			background-position: center center;
+
+			img {
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: center center;
+			}
 		}
 
 		.des {
@@ -108,7 +112,6 @@
 			.des {
 				position: static;
 				padding-left: 100px;
-				
 			}
 		}
 	}
