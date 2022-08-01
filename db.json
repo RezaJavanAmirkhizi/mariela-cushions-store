@@ -214,19 +214,23 @@
 	"Collections": [
 		{
 			"id": 1,
-			"name": "Simple"
+			"name": "Simple",
+			"image": "https://images.unsplash.com/photo-1589361557054-4f8366403a79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 		},
 		{
 			"id": 2,
-			"name": "Many Colors"
+			"name": "Many Colors",
+			"image": "https://images.unsplash.com/photo-1575277340599-43db25b63b6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 		},
 		{
 			"id": 3,
-			"name": "Patterned"
+			"name": "Patterned",
+			"image": "https://images.unsplash.com/photo-1531877025030-f7696a50770f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 		},
 		{
 			"id": 4,
-			"name": "Valvet"
+			"name": "Valvet",
+			"image": "https://images.unsplash.com/photo-1584116831216-a0ca31378f00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 		}
 	]
 }
