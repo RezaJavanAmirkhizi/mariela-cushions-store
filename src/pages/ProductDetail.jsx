@@ -77,9 +77,14 @@ function ProductDetail(props) {
 								<input
 									type="number"
 									value={numOfProducts}
-									onChange={(e) =>
-										setNumOfProducts(Number(e.target.value))
-									}
+									onChange={(e) => {
+										if (e.target.value < 1) {
+											e.target.value = 1;
+										}
+										setNumOfProducts(
+											Number(e.target.value)
+										);
+									}}
 								/>
 								<h5 className={added ? "added" : ""}>
 									The item has been successfully added to the
