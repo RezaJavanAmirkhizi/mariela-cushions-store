@@ -16,6 +16,12 @@ function NavBar() {
 		}
 	}
 
+	const clickHandler = () => {
+		if (isOpen) {
+			setIsOpen(false);
+		}
+	}
+
 	return (
 		<div className="nav-bar">
 			<a href="/" className="logo">
@@ -26,22 +32,38 @@ function NavBar() {
 			</a>
 			<nav className={`menu-item ${isOpen ? "open" : "closed"}`}>
 				<li>
-					<Link className="link" to="/">
+					<Link
+						onClick={() => clickHandler()}
+						className="link"
+						to="/"
+					>
 						Home
 					</Link>
 				</li>
 				<li>
-					<Link className="link" to="/#about_me">
+					<Link
+						onClick={() => clickHandler()}
+						className="link"
+						to="/#about_me"
+					>
 						About me
 					</Link>
 				</li>
 				<li>
-					<Link className="link" to="/products">
+					<Link
+						onClick={() => clickHandler()}
+						className="link"
+						to="/products"
+					>
 						Products
 					</Link>
 				</li>
 				<li>
-					<Link className="link" to="/#contact_me">
+					<Link
+						onClick={() => clickHandler()}
+						className="link"
+						to="/#contact_me"
+					>
 						Contact me
 					</Link>
 				</li>
@@ -55,7 +77,11 @@ function NavBar() {
 					/>
 				</div>
 				<div className="nav-item">
-					<Link className="icon-link" to="/checkout">
+					<Link
+						onClick={() => clickHandler()}
+						className="icon-link"
+						to="/checkout"
+					>
 						<FontAwesomeIcon icon={faCartShopping} />
 					</Link>
 				</div>
