@@ -1,6 +1,6 @@
-
+import { Link } from "react-router-dom";
 function Footer() {
-    return (
+	return (
 		<div className="footer">
 			<div className="top">
 				<div className="item">
@@ -43,10 +43,26 @@ function Footer() {
 				</a>
 				<div className="menu">
 					<nav>
-						<li>Home</li>
-						<li>About me</li>
-						<li>Products</li>
-						<li>Contact me</li>
+						<li>
+							<Link className="link" to="/">
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link className="link" to="/#about_me">
+								About me
+							</Link>
+						</li>
+						<li>
+							<Link className="link" to="/products">
+								Products
+							</Link>
+						</li>
+						<li>
+							<Link className="link" to="/#contact_me">
+								Contact me
+							</Link>
+						</li>
 					</nav>
 				</div>
 				<div className="social-media">
