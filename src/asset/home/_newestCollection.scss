@@ -83,12 +83,16 @@
 				min-width: 300px;
 				max-width: 568px;
 				background-color: $secondary-box-background-color;
-			}
-
-			.pic,
-			.des {
 				position: static;
 				width: 100%;
+			}
+
+			.pic{
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
 			}
 
 			.des {

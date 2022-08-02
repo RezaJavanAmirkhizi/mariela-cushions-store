@@ -75,13 +75,20 @@
 			@include c-flex;
 		}
 
-		.pic{
-			min-width: 300px;
-			max-width: 440px;
-		}
+		.pic {
+			max-height: 675px;
+			height: auto;
 
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
 		.pic,
 		.des {
+			min-width: 300px;
+			max-width: 568px;
 			position: static;
 			width: 100%;
 		}
