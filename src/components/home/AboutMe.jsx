@@ -1,7 +1,7 @@
 
 function AboutMe() {
     return (
-		<div className="about-me">
+		<div id="about_me" className="about-me">
 			<div className="con-about">
 				<div className="des">
 					<p>{"About me".toUpperCase()}</p>

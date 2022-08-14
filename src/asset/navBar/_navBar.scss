@@ -20,7 +20,7 @@
 		height: 100%;
 		@include r-flex;
 		justify-content: flex-end;
-		li {
+		.link-con {
 			@include c-flex;
 			list-style: none;
 			padding: 0 20px;
@@ -40,15 +40,6 @@
 				font-family: "Cormorant Garamond", serif;
 			}
 
-			&:first-child::after {
-				content: "";
-				width: 100%;
-				height: 5px;
-				background-color: $main-box-background-color;
-				position: absolute;
-				bottom: 0;
-			}
-
 			&:hover::after {
 				content: "";
 				width: 100%;
@@ -58,6 +49,15 @@
 				bottom: 0;
 			}
 		}
+
+			.link-con.selected::after {
+				content: "";
+				width: 100%;
+				height: 5px;
+				background-color: $main-box-background-color;
+				position: absolute;
+				bottom: 0;
+			}
 	}
 
 	.nav-right {

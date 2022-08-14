@@ -1,26 +1,39 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function NavBar() {
-
+	//Create this state to open or close the navbar when page is responsive
 	const [isOpen, setIsOpen] = useState(false);
+
+	//Create this state to show selected navbar item
+	const [isSelected, setIsSelected] = useState("");
+
+	useEffect(() => {
+		let pathName = window.location.pathname;
+		if (pathName === "/") {
+			setIsSelected("Home");
+		} else if (pathName === "/products") {
+			setIsSelected("Products");
+		}
+	}, []);
 
 	const menuHandler = () => {
 		if (isOpen) {
 			setIsOpen(false);
-		}
-		else {
+		} else {
 			setIsOpen(true);
 		}
-	}
+	};
 
-	const clickHandler = () => {
+	const clickHandler = (value) => {
 		if (isOpen) {
 			setIsOpen(false);
 		}
-	}
+		setIsSelected(value);
+	};
 
 	return (
 		<div className="nav-bar">
@@ -31,41 +44,57 @@ function NavBar() {
 				/>
 			</a>
 			<nav className={`menu-item ${isOpen ? "open" : "closed"}`}>
-				<li>
+				<li
+					className={`link-con ${
+						isSelected === "Home" ? "selected" : ""
+					}`}
+				>
 					<Link
-						onClick={() => clickHandler()}
+						onClick={() => clickHandler("Home")}
 						className="link"
 						to="/"
 					>
 						Home
 					</Link>
 				</li>
-				<li>
-					<Link
-						onClick={() => clickHandler()}
+				<li
+					className={`link-con ${
+						isSelected === "About me" ? "selected" : ""
+					}`}
+				>
+					<HashLink
+						onClick={() => clickHandler("About me")}
 						className="link"
 						to="/#about_me"
 					>
 						About me
-					</Link>
+					</HashLink>
 				</li>
-				<li>
+				<li
+					className={`link-con ${
+						isSelected === "Products" ? "selected" : ""
+					}`}
+				>
 					<Link
-						onClick={() => clickHandler()}
+						onClick={() => clickHandler("Products")}
 						className="link"
 						to="/products"
 					>
 						Products
 					</Link>
 				</li>
-				<li>
-					<Link
-						onClick={() => clickHandler()}
+				<li
+					className={`link-con ${
+						isSelected === "Contact me" ? "selected" : ""
+					}`}
+				>
+					<HashLink
+						onClick={() => clickHandler("Contact me")}
 						className="link"
 						to="/#contact_me"
 					>
 						Contact me
-					</Link>
+					</HashLink>
 				</li>
 			</nav>
 			<div className="nav-right">

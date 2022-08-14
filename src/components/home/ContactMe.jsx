@@ -2,7 +2,7 @@
 function ContactMe() {
     
     return (
-		<div className="contact-me">
+		<div id="contact_me" className="contact-me">
 			<div className="contacts">
 				<div className="item">
 					<p>EMAIL</p>
